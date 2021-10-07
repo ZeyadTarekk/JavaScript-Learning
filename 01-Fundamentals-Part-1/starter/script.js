@@ -53,9 +53,16 @@
 // x += 6;
 // console.log(x);
 
-console.log("A first line of the string \n Second line of the string");
+// console.log("A first line of the string \n Second line of the string");
 
-// Using Template strings
+// // Using Template strings
+// console.log(`First line
+// second line`);
 
-console.log(`First line 
-second line`);
+const age = 18;
+
+if (age >= 18) {
+  console.log("Ahmed can start driving license 😊");
+} else {
+  console.log(`${18 - age} Year(s) left for him😢`);
+}
