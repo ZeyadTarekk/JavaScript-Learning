@@ -37,18 +37,25 @@
 // console.log(typeof job);
 // console.log(job);
 
-const currentYear = 2021;
-const birthYear = 2001;
-const age = currentYear - birthYear;
-const ageMohamed = 42;
-console.log(age, ageMohamed);
+// const currentYear = 2021;
+// const birthYear = 2001;
+// const age = currentYear - birthYear;
+// const ageMohamed = 42;
+// console.log(age, ageMohamed);
 
-const firstName = "Zeyad";
-const lastName = "Tarek";
-const fullName = firstName + " " + lastName;
-console.log(firstName + " " + lastName);
+// const firstName = "Zeyad";
+// const lastName = "Tarek";
+// const fullName = firstName + " " + lastName;
+// console.log(firstName + " " + lastName);
 
-let x = 15;
-x--;
-x += 6;
-console.log(x);
+// let x = 15;
+// x--;
+// x += 6;
+// console.log(x);
+
+console.log("A first line of the string \n Second line of the string");
+
+// Using Template strings
+
+console.log(`First line 
+second line`);

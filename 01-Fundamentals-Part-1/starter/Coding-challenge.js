@@ -31,3 +31,6 @@ if (markBMI > johnBMI) markHigherBMI = true;
 console.log(markBMI);
 console.log(johnBMI);
 console.log(markHigherBMI);
+
+let newString = `Mark BMI = ${markBMI} and John BMI = ${johnBMI} `;
+console.log(newString);
