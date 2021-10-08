@@ -80,16 +80,31 @@
 
 // console.log("23" - "10" - 3);
 
-console.log(Boolean(undefined));
-console.log(Boolean(0));
-console.log(Boolean(""));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+// console.log(Boolean(undefined));
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
 
-let money = "aa";
+// let money = "aa";
 
-if (money) {
-  console.log("Money is Defined");
-} else {
-  console.log("Money is Undefined");
-}
+// if (money) {
+//   console.log("Money is Defined");
+// } else {
+//   console.log("Money is Undefined");
+// }
+
+let age = 19;
+if (age === 18) console.log("You are adult");
+else console.log("You are not an adult yet");
+
+let number = "18";
+console.log(number == 18);
+console.log(number === 18);
+
+let userFavNumber = prompt("What is Your Favourite number?");
+
+console.log(userFavNumber);
+
+if (userFavNumber !== 23) console.log("Not strict 23");
+if (userFavNumber != 23) console.log("Loose 23");
