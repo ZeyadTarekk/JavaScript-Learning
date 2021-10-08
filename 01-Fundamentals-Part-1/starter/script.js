@@ -67,15 +67,29 @@
 //   console.log(`${18 - age} Year(s) left for him😢`);
 // }
 
-let inputYear = "2001";
-console.log(inputYear);
-console.log(Number(inputYear) + 10);
-const no = 231;
-console.log(String(no) + 2);
-inputYear += 5;
-console.log(inputYear);
-console.log("I'm " + 23 + " Years old");
-console.log("I'm " + String(23) + " Years old");
-console.log("I'm " + "23" + " Years old");
+// let inputYear = "2001";
+// console.log(inputYear);
+// console.log(Number(inputYear) + 10);
+// const no = 231;
+// console.log(String(no) + 2);
+// inputYear += 5;
+// console.log(inputYear);
+// console.log("I'm " + 23 + " Years old");
+// console.log("I'm " + String(23) + " Years old");
+// console.log("I'm " + "23" + " Years old");
 
-console.log("23" - "10" - 3);
+// console.log("23" - "10" - 3);
+
+console.log(Boolean(undefined));
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+let money = "aa";
+
+if (money) {
+  console.log("Money is Defined");
+} else {
+  console.log("Money is Undefined");
+}
