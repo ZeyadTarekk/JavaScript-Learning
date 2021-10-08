@@ -59,10 +59,23 @@
 // console.log(`First line
 // second line`);
 
-const age = 18;
+// const age = 18;
 
-if (age >= 18) {
-  console.log("Ahmed can start driving license 😊");
-} else {
-  console.log(`${18 - age} Year(s) left for him😢`);
-}
+// if (age >= 18) {
+//   console.log("Ahmed can start driving license 😊");
+// } else {
+//   console.log(`${18 - age} Year(s) left for him😢`);
+// }
+
+let inputYear = "2001";
+console.log(inputYear);
+console.log(Number(inputYear) + 10);
+const no = 231;
+console.log(String(no) + 2);
+inputYear += 5;
+console.log(inputYear);
+console.log("I'm " + 23 + " Years old");
+console.log("I'm " + String(23) + " Years old");
+console.log("I'm " + "23" + " Years old");
+
+console.log("23" - "10" - 3);
