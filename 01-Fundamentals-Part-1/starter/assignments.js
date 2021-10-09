@@ -50,3 +50,22 @@ if (population > 33) {
 if (language === "English" && population < 50 && !isIsland)
   console.log("You should live in Egypt :)");
 else console.log("Egypt does not meet your criteria :(");
+
+switch (language) {
+  case "chinese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "english":
+    console.log("3rd place");
+    break;
+  case "Arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
+    break;
+}
