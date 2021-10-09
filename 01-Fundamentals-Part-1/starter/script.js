@@ -94,17 +94,23 @@
 //   console.log("Money is Undefined");
 // }
 
-let age = 19;
-if (age === 18) console.log("You are adult");
-else console.log("You are not an adult yet");
+// let age = 19;
+// if (age === 18) console.log("You are adult");
+// else console.log("You are not an adult yet");
 
-let number = "18";
-console.log(number == 18);
-console.log(number === 18);
+// let number = "18";
+// console.log(number == 18);
+// console.log(number === 18);
 
-let userFavNumber = prompt("What is Your Favourite number?");
+// let userFavNumber = prompt("What is Your Favourite number?");
 
-console.log(userFavNumber);
+// console.log(userFavNumber);
 
-if (userFavNumber !== 23) console.log("Not strict 23");
-if (userFavNumber != 23) console.log("Loose 23");
+// if (userFavNumber !== 23) console.log("Not strict 23");
+// if (userFavNumber != 23) console.log("Loose 23");
+
+let license = true;
+let vision = false;
+console.log(license || vision);
+console.log(!license);
+console.log(!vision);
