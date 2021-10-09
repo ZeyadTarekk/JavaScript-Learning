@@ -109,8 +109,26 @@
 // if (userFavNumber !== 23) console.log("Not strict 23");
 // if (userFavNumber != 23) console.log("Loose 23");
 
-let license = true;
-let vision = false;
-console.log(license || vision);
-console.log(!license);
-console.log(!vision);
+// let license = true;
+// let vision = false;
+// console.log(license || vision);
+// console.log(!license);
+// console.log(!vision);
+
+const day = "dsa";
+
+switch (day) {
+  case "Monday": //day === "Monday"
+    console.log("Hello Zeyad");
+    console.log(`Today is ${day}`);
+    break;
+  case "Sunday":
+    console.log("Zeyad");
+    console.log(`Today is ${day}`);
+    break;
+  default:
+    console.log("Not a valid day");
+    break;
+}
+
+console.log("Outside switch ");
