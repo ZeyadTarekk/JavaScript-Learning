@@ -6,10 +6,10 @@ console.log(country);
 console.log(continent);
 console.log(population);
 
-let isIsLand = false;
+let isIsland = false;
 const language = "Arabic";
 
-console.log(typeof isIsLand);
+console.log(typeof isIsland);
 console.log(typeof population);
 console.log(typeof country);
 console.log(typeof language);
@@ -35,14 +35,18 @@ if (population > 33) {
   console.log(`${country}'s population is ${33 - population} below average '`);
 }
 
-let numNeighbours = Number(
-  prompt("How many neighbour countries does your country have?")
-);
+// let numNeighbours = Number(
+//   prompt("How many neighbour countries does your country have?")
+// );
 
-if (numNeighbours === 1) {
-  console.log("Only 1 border!");
-} else if (numNeighbours > 1) {
-  console.log("More than 1 border");
-} else {
-  console.log("No borders");
-}
+// if (numNeighbours === 1) {
+//   console.log("Only 1 border!");
+// } else if (numNeighbours > 1) {
+//   console.log("More than 1 border");
+// } else {
+//   console.log("No borders");
+// }
+
+if (language === "English" && population < 50 && !isIsland)
+  console.log("You should live in Egypt :)");
+else console.log("Egypt does not meet your criteria :(");
