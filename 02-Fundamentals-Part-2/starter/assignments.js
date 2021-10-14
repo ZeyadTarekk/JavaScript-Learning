@@ -82,7 +82,7 @@ function percentageOfWorld1(popul) {
   return (popul / 7900) * 100;
 }
 
-const percentageOfWorld2 = function (popula) {
+const percentageOfWorld2 = function (popul) {
   return (popul / 7900) * 100;
 };
 
@@ -91,7 +91,13 @@ const pop2 = percentageOfWorld1(100);
 const pop3 = percentageOfWorld1(2541);
 console.log(pop1, pop2, pop3);
 
-const pop4 = percentageOfWorld1(1441);
-const pop5 = percentageOfWorld1(100);
-const pop6 = percentageOfWorld1(2541);
+const pop4 = percentageOfWorld2(1441);
+const pop5 = percentageOfWorld2(100);
+const pop6 = percentageOfWorld2(2541);
 console.log(pop4, pop5, pop6);
+
+const percentageOfWorld3 = (populationz) => (populationz / 7900) * 100;
+const pop7 = percentageOfWorld3(1441);
+const pop8 = percentageOfWorld3(100);
+const pop9 = percentageOfWorld3(2541);
+console.log(pop7, pop8, pop9);
