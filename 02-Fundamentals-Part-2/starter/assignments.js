@@ -110,3 +110,11 @@ const test1 = describePopulation("Egypt", 100);
 const test2 = describePopulation("China", 1450);
 
 console.log(test1 + "\n" + test2);
+
+function func() {
+  console.log("Before return");
+  return;
+  console.log("After return");
+}
+
+func();
