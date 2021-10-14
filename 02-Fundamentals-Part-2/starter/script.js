@@ -40,3 +40,21 @@ const getAge2 = function (birthYear) {
 };
 console.log(getAge2(2000));
 // console.log(getAge3(1999));
+
+const printName = function (name1, name2) {
+  return name1 + " " + name2;
+};
+
+let nameZ = printName("Zeyad", "Tarek");
+console.log(nameZ);
+
+const ageYear = (birthYear2, nameZey) => nameZey + " " + (2021 - birthYear2);
+
+console.log(ageYear(2001, "Zeyad"));
+
+const yearsUntilRetirement = (birthYear3) => {
+  const age = 2021 - birthYear3;
+  return 60 - age;
+};
+
+console.log(yearsUntilRetirement(2001));
