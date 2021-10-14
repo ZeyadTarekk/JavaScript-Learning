@@ -58,3 +58,24 @@ const yearsUntilRetirement = (birthYear3) => {
 };
 
 console.log(yearsUntilRetirement(2001));
+
+//Arrays
+const friends = ["zeyad", "ahmed", "mohamed", "ali"];
+friends[4] = "moaz";
+console.log(friends[4]);
+
+const years = new Array(1991, 2001, 2004, 2006, 2010);
+console.log(years);
+years[4] = 2021;
+years[6] = 2029;
+console.log(years);
+console.log(years[5]);
+
+console.log(years.length);
+
+//error
+// years = [2001, 2003];
+// console.log(years);
+
+const myInfo = ["Zeyad", "Tarek", 20, "Student", years];
+console.log(myInfo);
