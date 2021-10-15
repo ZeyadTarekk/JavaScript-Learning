@@ -125,9 +125,9 @@ if (populations.length === 4) console.log("True");
 else console.log("false");
 
 const percentages = [
-  percentageOfWorld1(100),
-  percentageOfWorld1(1400),
-  percentageOfWorld1(230),
-  percentageOfWorld1(2900),
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
