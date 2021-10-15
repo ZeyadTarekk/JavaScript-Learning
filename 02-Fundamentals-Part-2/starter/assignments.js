@@ -134,7 +134,7 @@ console.log(percentages);
 
 const names = ["Zeyad", "Ahmed", "Mohamed"];
 console.log(names);
-names.push("Ali");
+console.log(`Size ${names.push("Ali")}`);
 console.log(names);
-names.pop();
+console.log(names.pop());
 console.log(names);
