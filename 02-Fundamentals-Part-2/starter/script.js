@@ -79,3 +79,21 @@ console.log(years.length);
 
 const myInfo = ["Zeyad", "Tarek", 20, "Student", years];
 console.log(myInfo);
+
+const names = ["Zeyad", "Ahmed", "Mohamed"];
+console.log(names);
+console.log(`Size ${names.push("Ali")}`);
+console.log(names);
+console.log(names.pop());
+console.log(names);
+
+console.log(names.unshift("Adel"));
+console.log(names);
+
+console.log(names.indexOf("Zeyad"));
+
+names.shift();
+console.log(names);
+
+console.log(names.includes("Zeyad"));
+console.log(names.includes("Zeya"));

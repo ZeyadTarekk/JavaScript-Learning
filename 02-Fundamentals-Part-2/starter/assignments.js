@@ -131,10 +131,3 @@ const percentages = [
   percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
-
-const names = ["Zeyad", "Ahmed", "Mohamed"];
-console.log(names);
-console.log(`Size ${names.push("Ali")}`);
-console.log(names);
-console.log(names.pop());
-console.log(names);
