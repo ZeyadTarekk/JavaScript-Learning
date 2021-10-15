@@ -118,3 +118,16 @@ function func() {
 }
 
 func();
+
+const populations = [100, 1400, 230, 2900];
+console.log(populations);
+if (populations.length === 4) console.log("True");
+else console.log("false");
+
+const percentages = [
+  percentageOfWorld1(100),
+  percentageOfWorld1(1400),
+  percentageOfWorld1(230),
+  percentageOfWorld1(2900),
+];
+console.log(percentages);
