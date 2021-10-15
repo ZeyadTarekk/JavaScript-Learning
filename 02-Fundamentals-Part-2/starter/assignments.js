@@ -131,3 +131,19 @@ const percentages = [
   percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
+
+const neighbours = ["Libya", "Sudan", "USA"];
+console.log(neighbours);
+neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+// neighbours.push("Germany");
+
+if (!neighbours.includes("Germany"))
+  console.log("Probably not a central European country :D");
+
+const countryIndex = neighbours.indexOf("Sudan");
+neighbours[countryIndex] = "Republic of Sudan";
+console.log(neighbours);
