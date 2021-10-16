@@ -168,3 +168,9 @@ const zeyadArray = ["Zeyad", "Tarek", 2001, ["Ali", "Mohamed"], "Student"];
 console.log(zeyadArray);
 
 for (let i = zeyadArray.length - 1; i >= 0; i--) console.log(zeyadArray[i]);
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`Lifting weights repetition no ${rep} 🏋️‍♂️🏋️‍♂️`);
+  rep++;
+}
