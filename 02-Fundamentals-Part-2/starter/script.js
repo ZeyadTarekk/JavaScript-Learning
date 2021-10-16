@@ -106,4 +106,21 @@ const zeyadObject = {
 };
 
 console.log(zeyadObject);
-console.log(zeyadObject.friends);
+console.log(zeyadObject.lastName);
+console.log(zeyadObject["lastName"]);
+
+const nameKey = "Name";
+
+console.log(zeyadObject[`first${nameKey}`]);
+console.log(zeyadObject["last" + nameKey]);
+
+// const property = prompt("What do you want to know about zeyad?");
+// console.log(zeyadObject[property]);
+
+zeyadObject.location = "Egypt";
+zeyadObject["job"] = "Student";
+console.log(zeyadObject);
+
+console.log(
+  `${zeyadObject.firstName} has ${zeyadObject.friends.length} friends and his best friend called ${zeyadObject.friends[0]}`
+);
