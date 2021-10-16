@@ -124,3 +124,33 @@ console.log(zeyadObject);
 console.log(
   `${zeyadObject.firstName} has ${zeyadObject.friends.length} friends and his best friend called ${zeyadObject.friends[0]}`
 );
+
+const zeyadObject2 = {
+  firstName: "Zeyad",
+  lastName: "Tarek",
+  birthYear: 2001,
+  friends: ["Ali", "Mohamed"],
+  job: "Student",
+  // calcAge: function (birthYear) {
+  //   return 2021 - birthYear;
+  // },
+  // calcAge: function () {
+  //   return 2021 - this.birthYear;
+  // },
+  hasDriverslicense: true,
+  calcAge: function () {
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is ${this.calcAge()} years old ${
+      this.job
+    } and he has ${this.hasDriverslicense ? "a" : "no"} driver's license`;
+  },
+};
+
+// console.log(zeyadObject2.calcAge(zeyadObject2.birthYear));
+// console.log(zeyadObject2["calcAge"](2000));
+console.log(zeyadObject2.calcAge());
+console.log(zeyadObject2.age);
+console.log(zeyadObject2.getSummary());
