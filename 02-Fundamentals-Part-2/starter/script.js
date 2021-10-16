@@ -154,3 +154,7 @@ const zeyadObject2 = {
 console.log(zeyadObject2.calcAge());
 console.log(zeyadObject2.age);
 console.log(zeyadObject2.getSummary());
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`Lifting weights repetition no ${i} 🏋️‍♂️🏋️‍♂️`);
+}
