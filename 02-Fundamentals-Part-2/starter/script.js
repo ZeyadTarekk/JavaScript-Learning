@@ -163,3 +163,8 @@ for (let i = 1; i <= 15; i++) {
   if (i == 5) break;
   console.log(i);
 }
+
+const zeyadArray = ["Zeyad", "Tarek", 2001, ["Ali", "Mohamed"], "Student"];
+console.log(zeyadArray);
+
+for (let i = zeyadArray.length - 1; i >= 0; i--) console.log(zeyadArray[i]);
