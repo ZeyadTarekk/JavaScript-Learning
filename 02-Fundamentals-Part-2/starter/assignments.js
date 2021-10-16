@@ -173,3 +173,7 @@ console.log(
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
 console.log(myCountry.isIsland);
+
+for (let i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is currently voting`);
+}
