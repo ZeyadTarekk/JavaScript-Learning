@@ -147,3 +147,11 @@ if (!neighbours.includes("Germany"))
 const countryIndex = neighbours.indexOf("Sudan");
 neighbours[countryIndex] = "Republic of Sudan";
 console.log(neighbours);
+
+const myCountry = {
+  country: "Egypt",
+  capital: "Cairo",
+  language: "Arabic",
+  population: 101,
+  neighbours: ["Libya", "Sudan", "USA"],
+};
