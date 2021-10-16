@@ -154,6 +154,13 @@ const myCountry = {
   language: "Arabic",
   population: 101,
   neighbours: ["Libya", "Sudan", "USA"],
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+    return this.isIsland;
+  },
 };
 
 // 'Finland has 6 million finnish-speaking people, 3 neighbouring countries
@@ -162,3 +169,7 @@ const myCountry = {
 console.log(
   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
 );
+
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
+console.log(myCountry.isIsland);
