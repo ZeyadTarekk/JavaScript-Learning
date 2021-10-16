@@ -97,3 +97,13 @@ console.log(names);
 
 console.log(names.includes("Zeyad"));
 console.log(names.includes("Zeya"));
+
+const zeyadObject = {
+  firstName: "Zeyad",
+  lastName: "Tarek",
+  age: 2021 - 2001,
+  friends: ["Ali", "Mohamed"],
+};
+
+console.log(zeyadObject);
+console.log(zeyadObject.friends);
