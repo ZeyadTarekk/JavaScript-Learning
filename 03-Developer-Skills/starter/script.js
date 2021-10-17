@@ -10,3 +10,9 @@ let sec = ["e", "f", "g"];
 
 first = first.concat(sec);
 console.log(first);
+
+let zeyadObject = {
+  value: 123,
+  fullName: "Zeyad Tarek",
+};
+console.table(zeyadObject);
