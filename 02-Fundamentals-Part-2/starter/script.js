@@ -92,7 +92,7 @@ console.log(names);
 
 console.log(names.indexOf("Zeyad"));
 
-names.shift();
+console.log(names.shift());
 console.log(names);
 
 console.log(names.includes("Zeyad"));
