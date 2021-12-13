@@ -10,7 +10,7 @@ const getCountryData = function (country) {
   request.send();
   request.addEventListener("load", function () {
     // console.log(this.responseText);
-    const [data] = JSON.parse(this.responseText);
+    const [data] = JSON.parse(this.responseText); //this.responseText => request.responseText
     // console.log(data);
     // console.log(data.flags.svg);
     // console.log(data.name.common);
