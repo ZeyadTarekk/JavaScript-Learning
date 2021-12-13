@@ -11,7 +11,7 @@ const getCountryData = function (country) {
   request.addEventListener("load", function () {
     // console.log(this.responseText);
     const [data] = JSON.parse(this.responseText);
-    console.log(data);
+    // console.log(data);
     // console.log(data.flags.svg);
     // console.log(data.name.common);
     // console.log(data.currencies.EUR.name);
@@ -36,3 +36,4 @@ const getCountryData = function (country) {
 getCountryData("portugal");
 getCountryData("Egypt");
 getCountryData("Usa");
+getCountryData("germany");
