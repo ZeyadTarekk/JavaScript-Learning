@@ -83,5 +83,23 @@ const renderCounrty = function (data, className = "") {
 // request.open("GET", `https://restcountries.com/v2/name/${country}`);
 // request.send();
 
-const request = fetch("https://restcountries.com/v2/name/portugal");
-console.log(request);
+// const request = fetch("https://restcountries.com/v2/name/portugal");
+// console.log(request);
+
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.com/v2/name/${country}`)
+//     .then(function (res) {
+//       console.log(res);
+//       return res.json();
+//     })
+//     .then(function (data) {
+//       console.log(data[0]);
+//       renderCounrty(data[0]);
+//     });
+// };
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v2/name/${country}`)
+    .then(res => res.json())
+    .then(data => renderCounrty(data[0]));
+};
+getCountryData("portugal");
