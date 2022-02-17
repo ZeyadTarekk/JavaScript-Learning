@@ -6,11 +6,15 @@ const flights =
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
+  names: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 
   openingHours: {
     thu: {
@@ -27,3 +31,16 @@ const restaurant = {
     },
   },
 };
+
+const arr = [1, 2, 3, 4, 5];
+let [a, b, c] = arr;
+console.log(a, b, c);
+a = 6;
+console.log(a);
+console.log(arr);
+
+let [myOrder1, myOrder2] = restaurant.order(1,2);
+console.log(myOrder1,myOrder2); 
+
+const {names , mainMenu} = restaurant;
+console.log(names, mainMenu);
