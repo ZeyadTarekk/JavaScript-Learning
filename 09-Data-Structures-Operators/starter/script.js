@@ -56,3 +56,6 @@ console.log(restaurant.mainMenu);
 let myName = "Zeyad";
 const myNameArr = [...myName];
 console.log(myNameArr);
+
+const [x, y, ...others] = [1, 2, 3, 4, 5];
+console.log(x, y, others);
