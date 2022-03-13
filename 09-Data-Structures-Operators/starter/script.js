@@ -54,8 +54,27 @@ console.log(arrCopy);
 console.log(restaurant.mainMenu);
 
 let myName = "Zeyad";
+// spread because it is in the rhs of the = 
 const myNameArr = [...myName];
 console.log(myNameArr);
 
+// 1) destructuring
+// rest because it is in the lhs of the =
 const [x, y, ...others] = [1, 2, 3, 4, 5];
 console.log(x, y, others);
+
+const {sat , ...otherDays} = restaurant.openingHours;
+console.log(sat,otherDays);
+
+// 2) Functions
+
+function add(...numbers){
+  let sum = 0;
+  for(let i =0;i<numbers.length;i++)
+    sum+=numbers[i];
+  return sum;
+}
+
+console.log(add(1));
+console.log(add(1,3));
+console.log(add(1,3,5));
