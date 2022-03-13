@@ -30,6 +30,13 @@ const restaurant = {
       close: 24,
     },
   },
+  orderPizza: function (mainIngredient, ...others) {
+    console.log(`The main ingredient is: ${mainIngredient}`);
+    if (others.length > 0) {
+      console.log(`And the other are: `);
+      for (let i = 0; i < others.length; i++) console.log(others[i]);
+    }
+  },
 };
 
 const arr = [1, 2, 3, 4, 5];
@@ -54,7 +61,7 @@ console.log(arrCopy);
 console.log(restaurant.mainMenu);
 
 let myName = "Zeyad";
-// spread because it is in the rhs of the = 
+// spread because it is in the rhs of the =
 const myNameArr = [...myName];
 console.log(myNameArr);
 
@@ -63,18 +70,24 @@ console.log(myNameArr);
 const [x, y, ...others] = [1, 2, 3, 4, 5];
 console.log(x, y, others);
 
-const {sat , ...otherDays} = restaurant.openingHours;
-console.log(sat,otherDays);
+const { sat, ...otherDays } = restaurant.openingHours;
+console.log(sat, otherDays);
 
 // 2) Functions
 
-function add(...numbers){
+function add(...numbers) {
   let sum = 0;
-  for(let i =0;i<numbers.length;i++)
-    sum+=numbers[i];
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
   return sum;
 }
 
 console.log(add(1));
-console.log(add(1,3));
-console.log(add(1,3,5));
+console.log(add(1, 3));
+console.log(add(1, 3, 5));
+
+// using spread operator to send arguments to the function
+const numbersSum = [5, 6, 4];
+console.log(add(...numbersSum));
+
+restaurant.orderPizza("Tomato", "Cheese", "Onion");
+restaurant.orderPizza("Tomato");
