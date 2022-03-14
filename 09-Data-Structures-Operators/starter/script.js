@@ -112,3 +112,12 @@ console.log(7 && 0);
 
 if (restaurant.orderPizza) restaurant.orderPizza("Mushroom", "Cheese");
 restaurant.orderPizza && restaurant.orderPizza("Mushrroom", "Cheese");
+
+const valueNeeded = 0;
+const newValue = valueNeeded || 10;
+console.log(newValue);
+
+
+// Nullish values : null and undefined (NOT 0, "")
+const newValueCorrect = valueNeeded ?? 10;
+console.log(newValueCorrect);
