@@ -91,3 +91,15 @@ console.log(add(...numbersSum));
 
 restaurant.orderPizza("Tomato", "Cheese", "Onion");
 restaurant.orderPizza("Tomato");
+
+// Short circuiting
+console.log(3 || "Zeyad");
+console.log("" || "Zeyad");
+console.log(true || 0);
+console.log(undefined || null);
+// how it works? it gives the first non falsy value or the last falsy value
+console.log(undefined || 0 || "" || "Hello" || 23 || nul);
+
+const gusets1 =  restaurant.numGuests || 10;
+// const gusets1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(gusets1);
