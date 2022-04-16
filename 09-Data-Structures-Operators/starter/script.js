@@ -117,7 +117,21 @@ const valueNeeded = 0;
 const newValue = valueNeeded || 10;
 console.log(newValue);
 
-
 // Nullish values : null and undefined (NOT 0, "")
 const newValueCorrect = valueNeeded ?? 10;
 console.log(newValueCorrect);
+
+const arrNew = ["Zeyad", "Tarek", 320, 403];
+// For of loop
+for (let item of arrNew) {
+  if (item === 320) continue;
+  console.log(item);
+}
+// Getting index in the for of loop
+for (const it of arrNew.entries()) {
+  console.log(`Element no: ${it[0]} : ${it[1]}`);
+}
+// Getting index and element in the for of loop by destructing
+for (const it of arrNew.entries()) {
+  console.log(`Element no: ${it[0]} : ${it[1]}`);
+}
