@@ -150,3 +150,9 @@ for (const day of days) {
 
 console.log(restaurant.order?.(2, 1) ?? "Method doesn't exist");
 console.log(restaurant.orderFood?.(2, 1) ?? "Method doesn't exist");
+
+const usersArray = [
+  {name:"Zeyad", email:"Zeyad,ta01@gmail.com"}
+]
+
+console.log(usersArray[0]?.name);
