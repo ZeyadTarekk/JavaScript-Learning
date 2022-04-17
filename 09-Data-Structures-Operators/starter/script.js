@@ -136,3 +136,14 @@ for (const it of arrNew.entries()) {
 for (const it of arrNew.entries()) {
   console.log(`Element no: ${it[0]} : ${it[1]}`);
 }
+
+console.log(openingHours.fri?.open);
+
+const days = ["sun", "mon", "tue", "thu", "fri", "sat"];
+// console.log(openingHours[days[4]]);
+for (const day of days) {
+  if (openingHours[day] != undefined) {
+    console.log(day);
+    console.log(openingHours[day]);
+  }
+}
