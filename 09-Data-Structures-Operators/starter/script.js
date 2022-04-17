@@ -147,3 +147,6 @@ for (const day of days) {
     console.log(openingHours[day]);
   }
 }
+
+console.log(restaurant.order?.(2, 1) ?? "Method doesn't exist");
+console.log(restaurant.orderFood?.(2, 1) ?? "Method doesn't exist");
