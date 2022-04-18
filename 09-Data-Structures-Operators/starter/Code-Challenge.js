@@ -55,7 +55,7 @@ const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 // console.log(players1Final);
 
 const { team1, x: Draw, team2 } = { ...game.odds };
-// const { odds:{team1, x: Draw, team2} } =  game ; 
+// const { odds:{team1, x: Draw, team2} } =  game ;
 console.log(team1, Draw, team2);
 
 function printGoals(...playersNames) {
@@ -69,3 +69,26 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log("Team1 is more likely to win");
 team1 > team2 && console.log("Team2 is more likely to win");
+
+for (const player of game.scored.entries()) {
+  console.log(`Goal ${player[0] + 1}: ${player[1]}`);
+}
+
+let sum = 0;
+let oddsArr = Object.values(game.odds);
+const number = oddsArr.length;
+for (const num of oddsArr) sum += num;
+console.log(`Average of odds = ${(sum / number).toPrecision(3)}`);
+
+for (const odd of Object.entries(game.odds)) {
+  if (odd[0] != "x")
+    console.log(`Odd of victory of ${game[odd[0]]}: ${odd[1]}`);
+  else console.log(`Odd of Draw: ${odd[1]}`);
+}
+const scorers = {};
+
+for (const player of game.scored) {
+  if (scorers[player] == undefined) scorers[player] = 1;
+  else scorers[player]++;
+}
+console.log(scorers);
