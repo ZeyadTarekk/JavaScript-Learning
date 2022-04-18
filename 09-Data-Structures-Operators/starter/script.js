@@ -156,3 +156,21 @@ const usersArray2 = [];
 
 console.log(usersArray[0]?.name ?? "User doesn't exist");
 console.log(usersArray2[0]?.name ?? "User doesn't exist");
+
+const keys = Object.keys(openingHours);
+const values = Object.values(openingHours);
+
+console.log(keys);
+console.log(values);
+
+let stringValue = `We open at ${keys.length} days each week: `;
+for(const day of keys){
+  stringValue+=`${day}, `;
+}
+console.log(stringValue);
+const objectEntries = Object.entries(openingHours);
+console.log(objectEntries);
+
+for(const [key,{open, close}] of objectEntries){
+  console.log(`On day ${key} we open at ${open} and close at ${close}`);
+}
