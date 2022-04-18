@@ -70,6 +70,8 @@ printGoals(...game.scored);
 team1 < team2 && console.log("Team1 is more likely to win");
 team1 > team2 && console.log("Team2 is more likely to win");
 
+// Challenge #2
+
 for (const player of game.scored.entries()) {
   console.log(`Goal ${player[0] + 1}: ${player[1]}`);
 }
