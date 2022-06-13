@@ -1,1 +1,1 @@
-# My-Javascript-Course-Notes
+# Javascript-Learning
