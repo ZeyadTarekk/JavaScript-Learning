@@ -1,0 +1,19 @@
+{
+  "name": "javascript-learning",
+  "version": "1.0.0",
+  "description": "All the codes I write while learning JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeyadTarekk/JavaScript-Learning.git"
+  },
+  "author": "Zeyad Tarek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZeyadTarekk/JavaScript-Learning/issues"
+  },
+  "homepage": "https://github.com/ZeyadTarekk/JavaScript-Learning#readme"
+}
