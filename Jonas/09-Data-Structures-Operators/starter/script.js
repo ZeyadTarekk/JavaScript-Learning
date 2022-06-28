@@ -157,20 +157,37 @@ const usersArray2 = [];
 console.log(usersArray[0]?.name ?? "User doesn't exist");
 console.log(usersArray2[0]?.name ?? "User doesn't exist");
 
-const keys = Object.keys(openingHours);
-const values = Object.values(openingHours);
+// const keys = Object.keys(openingHours);
+// const values = Object.values(openingHours);
 
-console.log(keys);
+// console.log(keys);
+// console.log(values);
+
+// let stringValue = `We open at ${keys.length} days each week: `;
+// for (const day of keys) {
+//   stringValue += `${day}, `;
+// }
+// console.log(stringValue);
+// const objectEntries = Object.entries(openingHours);
+// console.log(objectEntries);
+
+// for (const [key, { open, close }] of objectEntries) {
+//   console.log(`On day ${key} we open at ${open} and close at ${close}`);
+// }
+
+// Loopint through objects
+console.log("Printing keys");
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+console.log("Printing values");
+const values = Object.values(openingHours);
 console.log(values);
 
-let stringValue = `We open at ${keys.length} days each week: `;
-for (const day of keys) {
-  stringValue += `${day}, `;
-}
-console.log(stringValue);
-const objectEntries = Object.entries(openingHours);
-console.log(objectEntries);
+console.log("Printing entries");
+const entries = Object.entries(openingHours);
+console.log(entries);
 
-for (const [key, { open, close }] of objectEntries) {
-  console.log(`On day ${key} we open at ${open} and close at ${close}`);
+for (const x of entries) {
+  console.log(x[0], x[1]);
 }
