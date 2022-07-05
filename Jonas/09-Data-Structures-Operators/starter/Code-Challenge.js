@@ -94,3 +94,37 @@ for (const player of game.scored) {
   else scorers[player]++;
 }
 console.log(scorers);
+
+// Challenge #3
+
+const gameEvents = new Map([
+  [17, "⚽ GOAL"],
+  [36, "🔁 Substitution"],
+  [47, "⚽ GOAL"],
+  [61, "🔁 Substitution"],
+  [64, "🔶 Yellow card"],
+  [69, "🔴 Red card"],
+  [70, "🔁 Substitution"],
+  [72, "🔁 Substitution"],
+  [76, "⚽ GOAL"],
+  [80, "⚽ GOAL"],
+  [92, "🔶 Yellow card"],
+]);
+
+const events = new Set([...gameEvents.values()]);
+console.log(events);
+
+console.log("Before removing", gameEvents);
+gameEvents.delete(64);
+console.log("After removing", gameEvents);
+
+const neededString = `An event happened, on
+average, every ${90 / gameEvents.size} minutes"`;
+
+console.log(neededString);
+
+for (const [key, value] of gameEvents) {
+  console.log(
+    `${key <= 45 ? "[First Half]" : "[Second Half]"} ${key} : ${value}`
+  );
+}
