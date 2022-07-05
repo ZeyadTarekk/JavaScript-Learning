@@ -199,3 +199,16 @@ console.log(newSet.add("ahmed"));
 console.log(newSet.entries);
 
 for (const item of newSet) console.log(item);
+
+const newMap = new Map();
+
+newMap.set("Zeyad", "CS");
+newMap.set("Fahd", "IS");
+// console.log(newMap[0]);
+const testingArr = [1, 2];
+newMap.set(testingArr, "Array of 1 and 2");
+console.log(newMap);
+console.log(newMap.get(testingArr));
+testingArr[2] = 3;
+console.log(testingArr);
+console.log(newMap.get(testingArr));
