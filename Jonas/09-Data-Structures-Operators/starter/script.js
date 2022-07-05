@@ -212,3 +212,22 @@ console.log(newMap.get(testingArr));
 testingArr[2] = 3;
 console.log(testingArr);
 console.log(newMap.get(testingArr));
+
+const mapArray = new Map([
+  ["zeyad", "CMP"],
+  ["amr", "sbme"],
+]);
+
+console.log(mapArray);
+console.log(mapArray.get("zeyad"));
+mapArray.set("zeyad", "MLH");
+console.log(mapArray.get("zeyad"));
+
+for (const [key, value] of mapArray) {
+  console.log(`${key} is maped to the value => ${value}`);
+}
+
+const newArrFromMap = [...mapArray];
+console.log("values", [...mapArray.values()]);
+console.log("keys", [...mapArray.keys()]);
+console.log(newArrFromMap);
