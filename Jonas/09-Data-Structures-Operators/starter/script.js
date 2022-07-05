@@ -191,3 +191,11 @@ console.log(entries);
 for (const x of entries) {
   console.log(x[0], x[1]);
 }
+
+const newSet = new Set(["Zeyad", "Tarek"]);
+console.log(newSet);
+
+console.log(newSet.add("ahmed"));
+console.log(newSet.entries);
+
+for (const item of newSet) console.log(item);
