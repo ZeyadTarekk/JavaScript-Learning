@@ -111,7 +111,7 @@ const gameEvents = new Map([
   [92, "🔶 Yellow card"],
 ]);
 
-const events = new Set([...gameEvents.values()]);
+const events = [...new Set(gameEvents.values())];
 console.log(events);
 
 console.log("Before removing", gameEvents);
