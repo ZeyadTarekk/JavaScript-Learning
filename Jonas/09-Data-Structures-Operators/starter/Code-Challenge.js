@@ -128,3 +128,30 @@ for (const [key, value] of gameEvents) {
     `${key <= 45 ? "[First Half]" : "[Second Half]"} ${key} : ${value}`
   );
 }
+
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+
+const myTextArea = document.querySelector("textarea");
+const myButton = document.querySelector("button");
+
+const convertCamelCase = function () {
+  const text = myTextArea.value;
+  // console.log(text);
+  const differentInputs = text.split("\n");
+  // console.log(differentInputs);
+  const newCamelCaseWords = [];
+  for (let i = 0; i < differentInputs.length; i++) {
+    const [firstWord, secondWord] = differentInputs[i].toLowerCase().split("_");
+    console.log(firstWord, " ", secondWord);
+    newCamelCaseWords.push(
+      firstWord + secondWord.replace(secondWord[0], secondWord[0].toUpperCase())
+    );
+  }
+  // console.log(newCamelCaseWords)
+  for (let i = 0; i < newCamelCaseWords.length; i++) {
+    console.log(newCamelCaseWords[i].padEnd(20," "), "✅".repeat(i + 1));
+  }
+};
+
+myButton.addEventListener("click", convertCamelCase);
