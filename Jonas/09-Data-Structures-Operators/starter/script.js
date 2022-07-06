@@ -261,3 +261,9 @@ const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
 
 console.log(myNameString.replaceAll("Khairy", "Mousa"));
+
+const message = "hello from PC";
+console.log(message.padStart(25, "=+"));
+
+const message2 = "Bad weather.. Delayed ";
+console.log(message2.repeat(3));
