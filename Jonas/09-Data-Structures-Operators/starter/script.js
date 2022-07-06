@@ -244,3 +244,20 @@ console.log(
     myNameString.indexOf("Tarek") + "Tarek".length
   )
 );
+
+// Fix name capitalization
+const passenger = "zEyAD"; // I need it Zeyad
+const passengerLower = passenger.toLowerCase();
+console.log(passengerLower);
+const newPassengerName =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(newPassengerName);
+
+// Comparing emails
+const email = "hello@zeyad.io";
+const loginEmail = "   hello@zeyad.io  \n";
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+console.log(myNameString.replaceAll("Khairy", "Mousa"));
