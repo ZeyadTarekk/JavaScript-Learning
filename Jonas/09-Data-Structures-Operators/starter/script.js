@@ -231,3 +231,16 @@ const newArrFromMap = [...mapArray];
 console.log("values", [...mapArray.values()]);
 console.log("keys", [...mapArray.keys()]);
 console.log(newArrFromMap);
+
+// Working with strings
+
+const myNameString = "Zeyad Tarek Khairy Khairy";
+
+console.log(myNameString.indexOf("Khairy"));
+console.log(myNameString.lastIndexOf("Khairy"));
+console.log(
+  myNameString.slice(
+    myNameString.indexOf("Tarek"),
+    myNameString.indexOf("Tarek") + "Tarek".length
+  )
+);
