@@ -51,3 +51,18 @@ const transformer = function (str, fn) {
 transformer("Javascript is the best ever", upperFirstWord);
 // console.log(transformer("Javascript is the best ever", upperFirstWord));
 transformer("Javascript is the best ever", oneWord);
+
+const greeting = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greetingArrow = (greeting) => (personName) => {
+  console.log(`${greeting} ${personName}`);
+};
+
+const greeterHey = greetingArrow("hey");
+greeterHey("Zeyad");
+greeterHey("Tarek");
+console.log(typeof greeterHey);
