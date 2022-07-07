@@ -66,3 +66,13 @@ const greeterHey = greetingArrow("hey");
 greeterHey("Zeyad");
 greeterHey("Tarek");
 console.log(typeof greeterHey);
+
+const addTax = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT = addTax(0.23);
+
+console.log(addVAT(100));
