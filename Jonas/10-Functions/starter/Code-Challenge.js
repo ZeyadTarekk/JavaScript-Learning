@@ -1,3 +1,5 @@
+// Challenge #1
+
 const poll = {
   question: "What is your favourite programming language?",
   options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
@@ -46,3 +48,12 @@ poll.displayResults.call({ answers: Data1 });
 poll.displayResults.call({ answers: Data1 }, "string");
 poll.displayResults.call({ answers: Data2 });
 poll.displayResults.call({ answers: Data2 }, "string");
+
+// Challenge #2
+(function () {
+  const header = document.querySelector("h1");
+  header.style.color = "red";
+  document.body.addEventListener("click", function () {
+    header.style.color = "blue";
+  });
+})();
