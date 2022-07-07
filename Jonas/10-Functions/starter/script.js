@@ -25,3 +25,5 @@ createBooking("LH123", 2);
 createBooking("LH123", 5);
 
 createBooking("LH123", undefined, 1000);
+
+console.log(typeof createBooking);
