@@ -95,3 +95,14 @@ console.log("---");
 movements.forEach(function (mov, i, arr) {
   console.log(`Movement ${i + 1}, ${mov}`);
 });
+
+// maps
+currencies.forEach(function (value, key, map) {
+  console.log(`${value}: ${key}`);
+});
+
+// sets
+
+
+const currenciesUnique = new Set(currencies.keys());
+console.log(currenciesUnique);
