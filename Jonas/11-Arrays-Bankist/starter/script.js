@@ -87,3 +87,11 @@ arr2[4] = "m";
 // arr1 = [1, 2, 3];
 console.log(arr1);
 console.log(arr2);
+
+for (const [i, mov] of movements.entries()) {
+  console.log(`Movement ${i + 1}, ${mov}`);
+}
+console.log("---");
+movements.forEach(function (mov, i, arr) {
+  console.log(`Movement ${i + 1}, ${mov}`);
+});
