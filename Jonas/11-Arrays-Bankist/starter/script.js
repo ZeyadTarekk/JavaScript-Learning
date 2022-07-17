@@ -103,6 +103,11 @@ currencies.forEach(function (value, key, map) {
 
 // sets
 
-
 const currenciesUnique = new Set(currencies.keys());
 console.log(currenciesUnique);
+
+const euroToUsd = 1.1;
+
+const convertedArray = movements.map((elem) => elem * euroToUsd);
+console.log(movements);
+console.log(convertedArray);
