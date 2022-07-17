@@ -111,3 +111,9 @@ const euroToUsd = 1.1;
 const convertedArray = movements.map((elem) => elem * euroToUsd);
 console.log(movements);
 console.log(convertedArray);
+
+const withdrawls = movements.filter(function (move) {
+  return move < 0;
+});
+
+console.log(withdrawls);
