@@ -125,4 +125,10 @@ const balance = movements.reduce(function (acc, val, i, arr) {
   return acc + val;
 }, 0);
 
-console.log(balance);
+// console.log(balance);
+
+const max = movements.reduce((acc, val) => {
+  let num = val > acc ? val : acc;
+  return num;
+}, movements[0]);
+console.log(max);
