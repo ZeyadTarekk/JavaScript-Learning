@@ -13,3 +13,20 @@ const checkDogs = function (arr1, arr2) {
 };
 checkDogs(juliaArr1, kateArr1);
 console.log(juliaArr1, kateArr1);
+
+const juliaArr2 = [5, 2, 4, 1, 15, 8, 3];
+const kateArr2 = [4, 16, 6, 10, 5, 6, 1, 4];
+
+const calcAverageHumanAge = function (arr) {
+  const humanAge = arr.map((element) => {
+    if (element <= 2) return element * 2;
+    else return 16 + element * 4;
+  });
+  console.log(humanAge);
+  const adults = humanAge.filter((elem) => elem >= 18);
+  console.log(humanAge);
+
+  const sum = adults.reduce((acc, val) => acc + val, 0);
+  console.log(sum / adults.length);
+};
+calcAverageHumanAge(juliaArr2);
