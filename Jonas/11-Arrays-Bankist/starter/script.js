@@ -117,3 +117,12 @@ const withdrawls = movements.filter(function (move) {
 });
 
 console.log(withdrawls);
+
+console.log(movements);
+
+const balance = movements.reduce(function (acc, val, i, arr) {
+  console.log(acc, val, i);
+  return acc + val;
+}, 0);
+
+console.log(balance);
