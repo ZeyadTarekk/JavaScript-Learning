@@ -30,3 +30,19 @@ const calcAverageHumanAge = function (arr) {
   console.log(sum / adults.length);
 };
 calcAverageHumanAge(juliaArr2);
+const calcAverageHumanAge2 = (arr) => {
+  let length = 0;
+  const sum = arr
+    .map((element) => {
+      if (element <= 2) return element * 2;
+      else return 16 + element * 4;
+    })
+    .filter((elem) => elem >= 18)
+    .reduce((acc, val) => {
+      length++;
+      return acc + val;
+    }, 0);
+
+  console.log(sum / length);
+};
+calcAverageHumanAge2(juliaArr2);
