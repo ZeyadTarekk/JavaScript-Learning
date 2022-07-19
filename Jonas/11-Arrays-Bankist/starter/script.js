@@ -132,3 +132,11 @@ const max = movements.reduce((acc, val) => {
   return num;
 }, movements[0]);
 console.log(max);
+
+const testArr = [1, 2, 3, 4];
+
+const elem = testArr.find((element) => element > 1);
+console.log(elem);
+
+const account = accounts.find((acc) => acc.owner === "Jessica Davis");
+console.log(account);
