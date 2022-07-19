@@ -46,3 +46,4 @@ const calcAverageHumanAge2 = (arr) => {
   console.log(sum / length);
 };
 calcAverageHumanAge2(juliaArr2);
+calcAverageHumanAge2([16, 6, 10, 5, 6, 1, 4]);
