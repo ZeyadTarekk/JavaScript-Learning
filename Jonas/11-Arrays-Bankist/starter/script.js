@@ -154,3 +154,8 @@ console.log(
     else return 0;
   })
 );
+
+const x = new Array(7);
+console.log(x);
+console.log(x.fill(3));
+
