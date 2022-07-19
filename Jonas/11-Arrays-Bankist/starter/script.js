@@ -140,3 +140,6 @@ console.log(elem);
 
 const account = accounts.find((acc) => acc.owner === "Jessica Davis");
 console.log(account);
+
+const index = testArr.findIndex((elem) => elem === 3);
+console.log(index);
