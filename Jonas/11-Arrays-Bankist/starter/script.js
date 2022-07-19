@@ -143,3 +143,14 @@ console.log(account);
 
 const index = testArr.findIndex((elem) => elem === 3);
 console.log(index);
+
+const arr = [900, 700, 1000, 1200, 700];
+
+// a is the current value and b is the next number
+console.log(
+  arr.sort((a, b) => {
+    if (a > b) return 1;
+    else if (a < b) return -1;
+    else return 0;
+  })
+);
