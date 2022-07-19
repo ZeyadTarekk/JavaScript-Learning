@@ -159,3 +159,18 @@ const x = new Array(7);
 console.log(x);
 console.log(x.fill(3));
 
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+const dice = Array.from(
+  { length: 100 },
+  () => 1 + Math.floor(Math.random() * 6)
+);
+
+console.log(dice);
+
+const movementsUI = Array.from(document.querySelectorAll(".movements__value"));
+console.log(movementsUI);
