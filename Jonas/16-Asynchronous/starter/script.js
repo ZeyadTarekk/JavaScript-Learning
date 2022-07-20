@@ -104,14 +104,14 @@ const renderCountry = function (data, className = "") {
 // };
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
-    .then(res => {
+    .then((res) => {
       console.log(res);
       // if (!res.ok) {
       //   throw new Error(`Country Not found (${res.status})`);
       // }
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       // console.log(data[0]);
       renderCountry(data[0]);
       if (!data[0].borders) throw new Error("No Neighbours");
@@ -120,12 +120,12 @@ const getCountryData = function (country) {
       // console.log(neighbour);
       return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
     })
-    .then(res2 => {
+    .then((res2) => {
       console.log(res2);
       return res2.json();
     })
-    .then(data2 => renderCountry(data2, "neighbour"))
-    .catch(err => {
+    .then((data2) => renderCountry(data2, "neighbour"))
+    .catch((err) => {
       console.error(`${err}💥💥💥`);
       renderError(`Something Went Wrong ${err.message} Try Again`);
     });
@@ -139,11 +139,11 @@ const whereAmI = function (lat, lng) {
   fetch(
     `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lng}&format=json&apiKey=a15434b551ad4fc48c638920b4640e0e`
   )
-    .then(Response => {
+    .then((Response) => {
       console.log(Response);
       return Response.json();
     })
-    .then(data => {
+    .then((data) => {
       console.log(data.results[0].country);
       if (data.results[0].country) {
         const myCount = data.results[0].country;
@@ -152,7 +152,7 @@ const whereAmI = function (lat, lng) {
         throw new Error("No Such Country");
       }
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err.message);
       renderError(err.message);
     });
