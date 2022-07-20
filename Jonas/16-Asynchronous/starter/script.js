@@ -3,6 +3,7 @@
 const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
+/*
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText("beforeend", msg);
   countriesContainer.style.opacity = 1;
@@ -163,3 +164,5 @@ const whereAmI = function (lat, lng) {
 whereAmI(-33.933, 18.474);
 // console.log(country);
 // getCountryData(country);
+
+*/
