@@ -4,22 +4,13 @@ const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 ////////////////////////////////////////////////////
 
-const getCountryData = function (country) {
-  const request = new XMLHttpRequest();
-  request.open("GET", `https://restcountries.com/v3.1/name/${country}`);
-  request.send();
-  request.addEventListener("load", function () {
-    console.log(request.responseText);
+const renderCounrty = function (data, className = "") {
+  const language = Object.values(data.languages)[0];
 
-    const [data] = JSON.parse(request.responseText);
-    console.log(data);
+  const currency = Object.values(data.currencies)[0].name;
 
-    const language = Object.values(data.languages)[0];
-
-    const currency = Object.values(data.currencies)[0].name;
-
-    const card = `
-  <article class="country">
+  const card = `
+  <article class="country ${className}">
     <img class="country__img" src="${data.flags.svg}" />
     <div class="country__data">
       <h3 class="country__name">${data.name.official}</h3>
@@ -33,13 +24,42 @@ const getCountryData = function (country) {
   </article>
   `;
 
-    countriesContainer.insertAdjacentHTML("beforeend", card);
-    countriesContainer.style.opacity = 1;
+  countriesContainer.insertAdjacentHTML("beforeend", card);
+  countriesContainer.style.opacity = 1;
+};
+
+const getCountryAndNeighbour = function (country) {
+  // ajax call 1
+  const request = new XMLHttpRequest();
+  request.open("GET", `https://restcountries.com/v3.1/name/${country}`);
+  request.send();
+  request.addEventListener("load", function () {
+    console.log(request.responseText);
+    const [data] = JSON.parse(request.responseText);
+    console.log(data);
+    // redner country
+    renderCounrty(data);
+
+    const [_, neighbour] = data.borders;
+    if (!neighbour) return;
+
+    // ajax call 2
+    const request2 = new XMLHttpRequest();
+    request2.open("GET", `https://restcountries.com/v3.1/alpha/${neighbour}`);
+    request2.send();
+
+    request2.addEventListener("load", function () {
+      const [data2] = JSON.parse(request2.responseText);
+      // redner country
+      renderCounrty(data2, "neighbour");
+    });
+    // get neighbour country
   });
 };
 
-getCountryData("egypt");
-getCountryData("usa");
+getCountryAndNeighbour("egypt");
+// getCountryAndNeighbour("usa");
+// getCountryAndNeighbour("germany");
 
 /*
 const renderError = function (msg) {
