@@ -61,8 +61,14 @@ const getCountryAndNeighbour = function (country) {
 // getCountryAndNeighbour("usa");
 // getCountryAndNeighbour("germany");
 
-const request = fetch("https://restcountries.com/v3.1/name/egypt");
-console.log(request);
+const getCountryDataPromises = function (country) {
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then((response) => response.json())
+    .then((data) => {
+      renderCounrty(data[0]);
+    });
+};
+getCountryDataPromises("egypt");
 /*
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText("beforeend", msg);
