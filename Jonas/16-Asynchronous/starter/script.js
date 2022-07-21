@@ -66,6 +66,16 @@ const getCountryDataPromises = function (country) {
     .then((response) => response.json())
     .then((data) => {
       renderCounrty(data[0]);
+      console.log(data[0]);
+      const [_, neighbour] = data[0].borders;
+      if (!neighbour) return;
+      console.log(neighbour);
+      return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    })
+    .then((neighbour) => neighbour.json())
+    .then((neighbourData) => {
+      console.log(neighbourData);
+      renderCounrty(neighbourData[0], "neighbour");
     });
 };
 getCountryDataPromises("egypt");
