@@ -57,10 +57,12 @@ const getCountryAndNeighbour = function (country) {
   });
 };
 
-getCountryAndNeighbour("egypt");
+// getCountryAndNeighbour("egypt");
 // getCountryAndNeighbour("usa");
 // getCountryAndNeighbour("germany");
 
+const request = fetch("https://restcountries.com/v3.1/name/egypt");
+console.log(request);
 /*
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText("beforeend", msg);
