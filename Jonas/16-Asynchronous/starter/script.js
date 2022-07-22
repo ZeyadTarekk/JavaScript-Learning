@@ -25,7 +25,7 @@ const renderCounrty = function (data, className = "") {
   `;
 
   countriesContainer.insertAdjacentHTML("beforeend", card);
-  countriesContainer.style.opacity = 1;
+  // countriesContainer.style.opacity = 1;
 };
 
 const getCountryAndNeighbour = function (country) {
@@ -61,6 +61,10 @@ const getCountryAndNeighbour = function (country) {
 // getCountryAndNeighbour("usa");
 // getCountryAndNeighbour("germany");
 
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText("beforeend", msg);
+};
+
 const getCountryDataPromises = function (country) {
   fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((response) => response.json())
@@ -76,9 +80,22 @@ const getCountryDataPromises = function (country) {
     .then((neighbourData) => {
       console.log(neighbourData);
       renderCounrty(neighbourData[0], "neighbour");
+    })
+    .catch((err) => {
+      renderError(err.message);
+      console.log(err.message);
+    })
+    .finally(() => {
+      console.log("promise finished");
+      countriesContainer.style.opacity = 1;
     });
 };
-getCountryDataPromises("egypt");
+
+btn.addEventListener("click", function () {
+  getCountryDataPromises("egypt");
+});
+getCountryDataPromises("egssypt");
+
 /*
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText("beforeend", msg);
