@@ -9,5 +9,9 @@ console.log("Importing Module");
 
 import * as Shop from "./shoppingCart.js";
 Shop.addToCart("MacBook", 2);
+Shop.addToCart("Pizza", 4);
+Shop.addToCart("Protein", 6);
 console.log(Shop.totalPrice, Shop.totalQTY);
 zeyad();
+
+console.log(Shop.cart);
