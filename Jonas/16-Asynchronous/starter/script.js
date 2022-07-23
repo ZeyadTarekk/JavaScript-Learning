@@ -203,10 +203,15 @@ const whereAmI = async function () {
 console.log("1: Will get location");
 // const city = whereAmI();
 // console.log(city);
-whereAmI()
-  .then((city) => console.log(city))
-  .catch((err) => console.log("Error catched", err.message));
-console.log("2: Finished getting location");
+(async function () {
+  try {
+    const city = await whereAmI();
+    console.log(city);
+  } catch (err) {
+    console.log("Error catched", err.message);
+  }
+  console.log("3: Finished getting location");
+})();
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
