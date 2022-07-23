@@ -147,6 +147,18 @@ btn.addEventListener("click", function () {
 //   })
 //   .then(() => console.log("1 more second"));
 
+// const getPosition = function () {
+//   return new Promise(function (resolve, reject) {
+//     // navigator.geolocation.getCurrentPosition(
+//     //   (position) => resolve(position),
+//     //   (err) => reject(err)
+//     // );
+//     navigator.geolocation.getCurrentPosition(resolve, reject);
+//   });
+// };
+
+// getPosition().then((pos) => console.log(pos));
+
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
     // navigator.geolocation.getCurrentPosition(
@@ -157,7 +169,29 @@ const getPosition = function () {
   });
 };
 
-getPosition().then((pos) => console.log(pos));
+const whereAmI = async function () {
+  const pos = await getPosition();
+
+  const { latitude: lat, longitude: long } = pos.coords;
+
+  const resultsGeo = await fetch(
+    `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=a15434b551ad4fc48c638920b4640e0e`
+  );
+
+  const results = await resultsGeo.json();
+
+  const res = await fetch(
+    `https://restcountries.com/v3.1/name/${results.results[0].country}`
+  );
+  const [json] = await res.json();
+  renderCounrty(json);
+  countriesContainer.style.opacity = 1;
+
+  // console.log(json);
+};
+
+whereAmI();
+console.log("Zeyad");
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
