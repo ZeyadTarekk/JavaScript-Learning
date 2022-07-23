@@ -260,6 +260,19 @@ const timeout = function (sec) {
   }
 })();
 
+(async function () {
+  try {
+    const data = await Promise.allSettled([
+      getJSON(`https://restcountries.com/v3.1/name/egypt`),
+      getJSON(`https://restcountries.com/v3.1/name/spain`),
+      getJSON(`https://restcountries.com/v3.1/name/italyss`),
+    ]);
+    console.log(data);
+  } catch (err) {
+    console.log(err.message);
+  }
+})();
+
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
 // };
