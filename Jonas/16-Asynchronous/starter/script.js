@@ -203,15 +203,41 @@ const whereAmI = async function () {
 console.log("1: Will get location");
 // const city = whereAmI();
 // console.log(city);
-(async function () {
+// (async function () {
+//   try {
+//     const city = await whereAmI();
+//     console.log(city);
+//   } catch (err) {
+//     console.log("Error catched", err.message);
+//   }
+//   console.log("3: Finished getting location");
+// })();
+
+const get3Countries = async function (c1, c2, c3) {
   try {
-    const city = await whereAmI();
-    console.log(city);
+    // const [firstCountry] = await getJSON(
+    //   `https://restcountries.com/v3.1/name/${c1}`
+    // );
+    // const [secondCountry] = await getJSON(
+    //   `https://restcountries.com/v3.1/name/${c2}`
+    // );
+    // const [thirdCountry] = await getJSON(
+    //   `https://restcountries.com/v3.1/name/${c3}`
+    // );
+
+    const data = await Promise.all([
+      getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+      getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+      getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+    ]);
+
+    console.log(data.map((elem) => elem[0].capital[0]));
   } catch (err) {
-    console.log("Error catched", err.message);
+    console.log(err.message);
   }
-  console.log("3: Finished getting location");
-})();
+};
+
+get3Countries("egypt", "spain", "usa");
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
