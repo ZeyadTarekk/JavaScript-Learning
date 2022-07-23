@@ -265,7 +265,20 @@ const timeout = function (sec) {
     const data = await Promise.allSettled([
       getJSON(`https://restcountries.com/v3.1/name/egypt`),
       getJSON(`https://restcountries.com/v3.1/name/spain`),
-      getJSON(`https://restcountries.com/v3.1/name/italyss`),
+      getJSON(`https://restcountries.com/v3.1/name/italy`),
+    ]);
+    console.log(data);
+  } catch (err) {
+    console.log(err.message);
+  }
+})();
+
+(async function () {
+  try {
+    const data = await Promise.any([
+      getJSON(`https://restcountries.com/v3.1/name/egypt`),
+      getJSON(`https://restcountries.com/v3.1/name/spain`),
+      getJSON(`https://restcountries.com/v3.1/name/italy`),
     ]);
     console.log(data);
   } catch (err) {
