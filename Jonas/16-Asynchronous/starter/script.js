@@ -237,7 +237,28 @@ const get3Countries = async function (c1, c2, c3) {
   }
 };
 
-get3Countries("egypt", "spain", "usa");
+// get3Countries("egypt", "spain", "usa");
+
+const timeout = function (sec) {
+  return new Promise(function (res, rej) {
+    setTimeout(() => {
+      rej(new Error(`Request took too long ${sec} seconds passed`));
+    }, sec * 1000);
+  });
+};
+
+(async function () {
+  try {
+    const res = await Promise.race([
+      getJSON(`https://restcountries.com/v3.1/name/italy`),
+      timeout(2),
+      getJSON(`https://restcountries.com/v3.1/name/egypt`),
+    ]);
+    console.log(res);
+  } catch (err) {
+    console.log(err.message);
+  }
+})();
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
