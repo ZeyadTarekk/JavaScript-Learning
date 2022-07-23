@@ -191,15 +191,22 @@ const whereAmI = async function () {
     const [json] = await res.json();
     renderCounrty(json);
     countriesContainer.style.opacity = 1;
+    return `You are in ${results.results[0].city}, ${results.results[0].country}`;
   } catch (err) {
     console.log(err.message);
     renderError(err.message);
     countriesContainer.style.opacity = 1;
+    throw err;
   }
 };
 
-whereAmI();
-console.log("Zeyad");
+console.log("1: Will get location");
+// const city = whereAmI();
+// console.log(city);
+whereAmI()
+  .then((city) => console.log(city))
+  .catch((err) => console.log("Error catched", err.message));
+console.log("2: Finished getting location");
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
