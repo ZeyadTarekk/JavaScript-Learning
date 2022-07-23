@@ -116,22 +116,36 @@ btn.addEventListener("click", function () {
 
 // console.log("Test End");
 
-const testPromise = new Promise(function (resolve, reject) {
-  console.log("Promise Started");
-  setTimeout(() => {
-    const number = Math.random();
-    console.log(number);
-    if (number >= 0.5) {
-      resolve("You WON!");
-    } else {
-      reject(new Error("You lost"));
-    }
-  }, 2000);
-});
+// const testPromise = new Promise(function (resolve, reject) {
+//   console.log("Promise Started");
+//   setTimeout(() => {
+//     const number = Math.random();
+//     console.log(number);
+//     if (number >= 0.5) {
+//       resolve("You WON!");
+//     } else {
+//       reject(new Error("You lost"));
+//     }
+//   }, 2000);
+// });
 
-testPromise
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err.message));
+// testPromise
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message));
+
+// Promisifying setTimeOut
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+}; 
+
+wait(2)
+  .then(() => {
+    console.log("After 2 seconds");
+    return wait(1);
+  })
+  .then(() => console.log("1 more second"));
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
