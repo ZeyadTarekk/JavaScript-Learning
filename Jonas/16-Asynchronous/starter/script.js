@@ -178,12 +178,16 @@ const whereAmI = async function () {
     const resultsGeo = await fetch(
       `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=a15434b551ad4fc48c638920b4640e0e`
     );
+    if (!resultsGeo.ok) throw new Error("Problem getting the location data");
 
     const results = await resultsGeo.json();
 
     const res = await fetch(
       `https://restcountries.com/v3.1/name/${results.results[0].country}`
     );
+
+    if (!res.ok) throw new Error("Problem getting the location data");
+
     const [json] = await res.json();
     renderCounrty(json);
     countriesContainer.style.opacity = 1;
