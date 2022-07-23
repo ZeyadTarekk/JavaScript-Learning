@@ -53,10 +53,10 @@ const getCountryDataPromises = function (country) {
         "Country not found"
       );
     })
-    .then((neighbourData) => {
-      // console.log(neighbourData);
-      renderCounrty(neighbourData[0], "neighbour");
-    })
+    // .then((neighbourData) => {
+    //   // console.log(neighbourData);
+    //   renderCounrty(neighbourData[0], "neighbour");
+    // })
     .catch((err) => {
       renderError(err.message);
       // console.log(err.message);
@@ -67,12 +67,27 @@ const getCountryDataPromises = function (country) {
     });
 };
 
-const whereAmI = function (lat, long) {
-  fetch(
-    `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=a15434b551ad4fc48c638920b4640e0e`
-  )
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   (position) => resolve(position),
+    //   (err) => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = function () {
+  getPosition()
+    .then((pos) => {
+      console.log(pos.coords);
+      const { latitude: lat, longitude: long } = pos.coords;
+      return fetch(
+        `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=a15434b551ad4fc48c638920b4640e0e`
+      );
+    })
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       if (!res.ok) throw new Error("Wrong coordinates");
       return res.json();
     })
@@ -91,6 +106,8 @@ const whereAmI = function (lat, long) {
     });
 };
 // whereAmI(-3321323.933, 1821312.474);
-whereAmI(52.508, 13.381);
+// whereAmI(52.508, 13.381);
 // whereAmI(19.037, 72.873);
 // whereAmI(-33.933, 18.474);
+
+btn.addEventListener("click", whereAmI);

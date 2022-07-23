@@ -134,18 +134,30 @@ btn.addEventListener("click", function () {
 //   .catch((err) => console.log(err.message));
 
 // Promisifying setTimeOut
-const wait = function (seconds) {
-  return new Promise(function (resolve) {
-    setTimeout(resolve, seconds * 1000);
-  });
-}; 
+// const wait = function (seconds) {
+//   return new Promise(function (resolve) {
+//     setTimeout(resolve, seconds * 1000);
+//   });
+// };
 
-wait(2)
-  .then(() => {
-    console.log("After 2 seconds");
-    return wait(1);
-  })
-  .then(() => console.log("1 more second"));
+// wait(2)
+//   .then(() => {
+//     console.log("After 2 seconds");
+//     return wait(1);
+//   })
+//   .then(() => console.log("1 more second"));
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   (position) => resolve(position),
+    //   (err) => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then((pos) => console.log(pos));
 
 // const helloFunc = function (name) {
 //   console.log(`Hello ${name}`);
