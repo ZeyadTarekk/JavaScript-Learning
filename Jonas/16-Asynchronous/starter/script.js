@@ -106,15 +106,40 @@ btn.addEventListener("click", function () {
 });
 // getCountryDataPromises("egssypt");
 
-console.log("Test Started");
-setTimeout(() => console.log("0 Sec Timer"), 0);
-Promise.resolve("Resolved Promise 1").then((res) => console.log(res));
-Promise.resolve("Resolved Promise 2").then((res) => {
-  // for (let i = 0; i < 1000000000; i++) {}
-  console.log(res);
+// console.log("Test Started");
+// setTimeout(() => console.log("0 Sec Timer"), 0);
+// Promise.resolve("Resolved Promise 1").then((res) => console.log(res));
+// Promise.resolve("Resolved Promise 2").then((res) => {
+//   // for (let i = 0; i < 1000000000; i++) {}
+//   console.log(res);
+// });
+
+// console.log("Test End");
+
+const testPromise = new Promise(function (resolve, reject) {
+  console.log("Promise Started");
+  setTimeout(() => {
+    const number = Math.random();
+    console.log(number);
+    if (number >= 0.5) {
+      resolve("You WON!");
+    } else {
+      reject(new Error("You lost"));
+    }
+  }, 2000);
 });
 
-console.log("Test End");
+testPromise
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err.message));
+
+// const helloFunc = function (name) {
+//   console.log(`Hello ${name}`);
+// };
+
+// setTimeout(() => {
+//   helloFunc("zeyad");
+// }, 1000);
 
 /*
 const renderError = function (msg) {
