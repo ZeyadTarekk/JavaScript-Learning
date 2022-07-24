@@ -53,3 +53,11 @@ console.log(stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
+
+// polyfiling
+import "core-js/stable"
+// import "core-js/stable/array/find"
+
+// polyfiling async functions
+import "regenerator-runtime/runtime"
+
