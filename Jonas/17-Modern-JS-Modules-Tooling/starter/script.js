@@ -16,11 +16,34 @@ zeyad();
 
 console.log(Shop.cart);
 
-const getLastPost = async function () {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  return data;
+// const getLastPost = async function () {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const data = await res.json();
+//   return data;
+// };
+
+// const data = getLastPost();
+// data.then((posts) => console.log(posts));
+
+import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+
+const state = {
+  cart: [
+    { product: "bread", qty: 3 },
+    { product: "pizza", qty: 2 },
+  ],
+  user: { loggedIn: true },
 };
 
-const data = getLastPost();
-data.then((posts) => console.log(posts));
+const stateClone = Object.assign({}, state);
+console.log(stateClone);
+
+if (state.user.loggedIn) console.log("TRUEE");
+else console.log("FALSEE");
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(state);
+console.log(stateClone);
+
+console.log(stateDeepClone);
