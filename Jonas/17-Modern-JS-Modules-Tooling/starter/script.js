@@ -15,3 +15,12 @@ console.log(Shop.totalPrice, Shop.totalQTY);
 zeyad();
 
 console.log(Shop.cart);
+
+const getLastPost = async function () {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+  return data;
+};
+
+const data = getLastPost();
+data.then((posts) => console.log(posts));
