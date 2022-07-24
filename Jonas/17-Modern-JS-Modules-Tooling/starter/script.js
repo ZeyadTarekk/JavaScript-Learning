@@ -25,7 +25,8 @@ console.log(Shop.cart);
 // const data = getLastPost();
 // data.then((posts) => console.log(posts));
 
-import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+// import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+import cloneDeep from "lodash-es";
 
 const state = {
   cart: [
@@ -47,3 +48,8 @@ console.log(state);
 console.log(stateClone);
 
 console.log(stateDeepClone);
+
+// Prevent reloading the page to reserve state
+if (module.hot) {
+  module.hot.accept();
+}
